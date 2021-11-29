@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<body>
+	<div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+	const root = document.getElementById("root");
+
+    const Title = () => {
+        return (
+            <h3 id="title" onMouseEnter={() => console.log("Mounse Enter!")}>
+                Hello I'm title
+            </h3>
+        )
+    }
+
+    const Button = () => {
+        return (
+            <button onClick={() => console.log("i'm clicked")}>
+                click me!
+            </button>
+        )
+    }
+
+    const container = <div>
+        <Title />
+        <Button />
+        </div>
+
+	ReactDOM.render(container, root);
+</script>
+</html>
+
+<!-- <!DOCTYPE html>
+<body>
+	<div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+	const root = document.getElementById("root");
+
+    const Title = <h3 id="title" onMouseEnter={() => console.log("Mounse Enter!")}>
+        Hello I'm title
+        </h3>
+
+    const Button = <button onClick={() => console.log("i'm clicked")}>
+        click me!
+        </button>
+
+    const container = React.createElement("div", null, [Title, Button]);
+	ReactDOM.render(container, root);
+</script>
+</html> -->
