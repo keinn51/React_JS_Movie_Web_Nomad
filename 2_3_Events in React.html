@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<body>
+	<div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script>
+	const root = document.getElementById("root");
+    const h3 = React.createElement("h3", {
+        onMouseEnter: () => console.log("Mounse Enter!"),
+    }, "Hello I'm a span");
+	const btn = React.createElement("button", {
+        onClick: () => console.log("i'm clicked")
+    }, "click me!");
+    const container = React.createElement("div", null, [h3, btn]);
+	ReactDOM.render(container, root);
+</script>
+</html>

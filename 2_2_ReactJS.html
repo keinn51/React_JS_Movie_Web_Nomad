@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<body>
+	<div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script>
+	const root = document.getElementById("root");
+	const span = React.createElement("span", {id: "sexy-span", style: {color: 'red'}}, "Hello, i'm a span");
+	ReactDOM.render(span, root);
+</script>
+</html>
+
+
+<!-- 
+
+	React JS 설치를 위한 Javascript 코드 Url
+	https://unpkg.com/react@17.0.2/umd/react.production.min.js
+
+	https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js
+
+	React JS - 어플리케이션이 아주 인터랙티브하도록 만들어주는 library. 엔진과 같다.
+	React-dom - library 또는 package. 모든 react element들을 HTML body에 둘 수 있도록 해줌.
+	ReactDOM.render() - render의 의미는 react element를 가지고 HTML로 만들어 배치한다는 것. 
+	즉, 사용자에게 보여준다는 의미
+	ReactDOM.render(span, span이 가야할 위치)
+	-> 그래서 보통 body에 id=“root” 만들어서 span을 root 안에 두라고 함
+
+
+	we don't make span but span exists inside the div!
+
+
+	React.createElement("span", {span의 property}, “span의 내용”)
+	-> property는 class name, id도 가능 style도 가능
+	-> 참고만 하고 외우지 말기. 이렇게 쓸 일 없음
+
+	바닐라JS는 HTML -> JS 순서
+	리액트는 JS -> HTML 순서
+
+	JS가 element를 생성하고 React JS가 그것을 HTML로 번역하는 것
+	React JS는 업데이트 해야 하는 HTML을 업데이트 할 수 있음
+ -->
