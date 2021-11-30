@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<body>
+	<div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+	const root = document.getElementById("root");
+    let counter = 0;
+
+    const render = function ()
+    {
+        ReactDOM.render(<Container />, root);
+    }
+
+    const countUp = function ()
+    {
+        counter += 1;
+        render();
+    }
+
+    const Container = () => (<div>
+        <h3>Total click: {counter}</h3>
+        <button onClick={countUp}>click!</button>
+    </div>);
+
+	render();
+</script>
+</html>

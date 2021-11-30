@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<body>
+	<div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+	const root = document.getElementById("root");
+
+    function App()
+    {
+        const [minutes, setMinutes] = React.useState();
+        const onChange = (event) => {
+            setMinutes(event.target.value)
+        }
+        return (
+            <div>
+                <h1 className="hi">Super Converter</h1>
+                <label htmlFor="minutes">Minutes</label>
+                <input 
+                    id="minutes"
+                    placeholder="Minutes" 
+                    type="number"
+                    onChange={onChange}
+                />
+                <h3>You want to convert {minutes}</h3>
+                <label htmlFor="hours">Hours</label>
+                <input id="hours"placeholder="Hours" type="number"/>
+            </div>
+        )
+    }
+
+    ReactDOM.render(<App />, root);
+</script>
+</html>
+
+<!-- <!DOCTYPE html>
+<body>
+	<div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+	const root = document.getElementById("root");
+
+    function App()
+    {
+        return (
+            <div>
+                <h1 class="hi">Super Converter</h1>
+                <label for="minutes">Minutes</label>
+                <input id="minutes"placeholder="Minutes" type="number"/>
+                <label for="hours">Hours</label>
+                <input id="hours"placeholder="Hours" type="number"/>
+            </div>
+        )
+    }
+
+    ReactDOM.render(<App />, root);
+</script>
+</html> -->

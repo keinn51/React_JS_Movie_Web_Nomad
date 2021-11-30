@@ -12,14 +12,13 @@
         Hello I'm title
         </h3>
 
-    console.log(Title);
-
     const Button = <button onClick={() => console.log("i'm clicked")}>
         click me!
         </button>
 
     const container = React.createElement("div", null, [Title, Button]);
 	ReactDOM.render(container, root);
+    // ReactDOM.render([Title, Button], root);
 </script>
 </html>
 
