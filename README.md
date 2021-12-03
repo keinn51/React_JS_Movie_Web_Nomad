@@ -4,9 +4,19 @@
 
 src 파일에 노트한 코드들이 있으며 세부 설명은 아래의 링크를 통해서 접근 가능합니다~!
 
+<br />
+
 <hr />
 
 ### 강의 노트 정리!
+
+<br />
+
+---
+
+#### 2강
+
+---
 
 ###### 1. [Vanilla JS vs. React JS](https://brash-wave-2cb.notion.site/1-Vanilla-JS-vs-React-JS-901aa80050774bffb3210adf49d6472c)
 
@@ -18,6 +28,14 @@ src 파일에 노트한 코드들이 있으며 세부 설명은 아래의 링크
 
 ###### 5. [JSX 로 interactive button 만들기](https://brash-wave-2cb.notion.site/5-JSX-interactive-button-a8c1b56bcd844ba0baa025a6a7d71b7f)
 
+<br />
+
+---
+
+#### 3강
+
+---
+
 ###### 6. [useState로 re-rendering 하기](https://brash-wave-2cb.notion.site/6-useState-re-rendering-5d43431ba32f417490534b465578ad1f)
 
 ###### 7. [state 를 통해 time converter 만들기 (1)](https://brash-wave-2cb.notion.site/7-state-converter-b31dfcf5d56d45d1a6749be18e38ab5e)
@@ -27,3 +45,14 @@ src 파일에 노트한 코드들이 있으며 세부 설명은 아래의 링크
 ###### 9. [state 를 통해 time converter 만들기 (3)](https://brash-wave-2cb.notion.site/9-state-time-converter-3-b1b687e416d34c568b82ee1b63eb51e8)
 
 ###### 10. [state 를 통해 Super converter 만들기 (state 최종)](https://brash-wave-2cb.notion.site/10-state-Super-converter-state-e8cdccca9f4b4536bd83e1687c6fad0d)
+
+
+<br />
+
+---
+
+#### 4강
+
+---
+
+###### 11. [props 사용법](https://brash-wave-2cb.notion.site/11-props-b08918bffd194499a20dbd781cefbff2)
