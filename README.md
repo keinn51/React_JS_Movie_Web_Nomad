@@ -56,3 +56,25 @@ src 파일에 노트한 코드들이 있으며 세부 설명은 아래의 링크
 ---
 
 ###### 11. [props 사용법](https://brash-wave-2cb.notion.site/11-props-b08918bffd194499a20dbd781cefbff2)
+
+###### 12. [React.memo 사용하기] (https://brash-wave-2cb.notion.site/12-React-memo-603eb5f33fee4fd2953ecb3c3cb9a20a)
+
+###### 13. [Prop Types 사용하기] (https://brash-wave-2cb.notion.site/13-Prop-Types-44f64370753e4d5ca6373fdcf5b64b64)
+
+<br />
+
+---
+
+#### 5강 + 6강
+
+이 곳 부터는 CRA 를 사용합니다.
+
+<img width="330" alt="스크린샷 2021-12-04 오후 2 04 26" src="https://user-images.githubusercontent.com/79993356/145031863-3fab4241-c581-4a31-8a2c-707479b7ad05.png">
+
+---
+
+###### 14. [nodejs 설치 및 react-app 실행] (https://brash-wave-2cb.notion.site/14-nodejs-react-app-7461cee1d5de451e934055ee7f1c6a79)
+
+###### 15. [create-react-app 에 대하여] (https://brash-wave-2cb.notion.site/15-create-react-app-3207f4f229f3456a987fb268f272f779)
+
+###### 16. [useEffect 사용하기] (https://brash-wave-2cb.notion.site/16-useEffect-2b0737d6b423475691e3348ea79504b1)
