@@ -1,17 +1,27 @@
 import {useEffect, useState}  from "react";
 
-function App() {
-  const [counter, setCounter] = useState(0);
-  const onClick = () => setCounter((curr) => curr + 1);
-  console.log("I run all the time!");
-  const iRunOnlyOnce = () => {
-    console.log("I run only once~");
-  }
-  useEffect(iRunOnlyOnce, []);
+function Hello (){
+
+  useEffect(() => {
+    console.log("Hi :)");
+    return (() => {
+      console.log("By :)");
+    });
+  }, []);
   return (
     <div>
-      <h1>{counter}</h1>
-      <button onClick={onClick}>Click me!</button>
+      <h1>HELLO!</h1>
+    </div>
+  );
+}
+
+function App() {
+  const [showing, setShowing] = useState(false);
+  const onClick = () => setShowing((curr) => !curr)
+  return (
+    <div>
+      {showing ? <Hello /> : null}
+      <button onClick={onClick}>{showing ? "Hide" : "Show"}</button>
     </div>
   );
 }
