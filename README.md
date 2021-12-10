@@ -78,3 +78,43 @@ src 파일에 노트한 코드들이 있으며 세부 설명은 아래의 링크
 ###### 15. [create-react-app 에 대하여](https://brash-wave-2cb.notion.site/15-create-react-app-3207f4f229f3456a987fb268f272f779)
 
 ###### 16. [useEffect 사용하기](https://brash-wave-2cb.notion.site/16-useEffect-2b0737d6b423475691e3348ea79504b1)
+
+###### 17. [useEffect 사용하기2](https://brash-wave-2cb.notion.site/17-useEffect-2-7c63f5f0edae4c1c819b8ebc8b611b31)
+
+###### 18. [useEffect hiding](https://brash-wave-2cb.notion.site/18-useEffect-hiding-75483d7d7edd49b49194f9fda5c243d8)
+
+<br />
+
+---
+
+#### 7강
+
+Really Practice!!!
+
+###### (1) To Do List
+
+<img width="394" alt="스크린샷 2021-12-10 오후 4 02 21" src="https://user-images.githubusercontent.com/79993356/145531493-1ca89c5c-653c-4466-9d65-7b0e3144fc13.png">
+
+###### (2) Coin Tracker
+
+![Untitled](https://user-images.githubusercontent.com/79993356/145531272-cd8c900a-5b02-4ad6-b4af-7fbdd71277dc.png)
+
+###### (3) Movie Web
+
+<img width="818" alt="스크린샷 2021-12-10 오후 4 01 21" src="https://user-images.githubusercontent.com/79993356/145531375-5c2075a3-ba08-4a81-9797-131d69d1e0d3.png">
+
+---
+
+###### 19. [To Do List Part1 (비구조화 할당)](https://brash-wave-2cb.notion.site/19-To-Do-List-Part1-795d94384d52422f8f2ff99187f35864)
+
+###### 20. [To do List Part2 (map 사용하기)](https://brash-wave-2cb.notion.site/20-To-do-List2-map-c2b0347e3a824e80b4027a3a12af6c76)
+
+###### 21. [Coin Tracker 만들기 (fetch)](https://brash-wave-2cb.notion.site/21-Coin-Tracker-fetch-72891f2627ef4ff18876a214b524b53f)
+
+###### 22. [Movie Web part1](https://brash-wave-2cb.notion.site/22-Movie-Web-part1-fdd9dc4720024f6c9cee1c3d83394000)
+
+###### 23. [Movie Web part2](https://brash-wave-2cb.notion.site/23-Movie-Web-part2-2a969e89781645a9ae0f7c963b91993a)
+
+###### 24. [useParams 으로 매개변수 넘겨주기](https://brash-wave-2cb.notion.site/24-useParams-2c6aab75a15f4e8a934eb4e4afdd0a97)
+
+###### 25. [publishing (Last!!)](https://brash-wave-2cb.notion.site/25-publishing-Last-3c48efc67d4b4c3fa5e9ecd5e89cb337)
