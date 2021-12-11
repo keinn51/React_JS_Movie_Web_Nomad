@@ -1,11 +1,12 @@
 * {
-  font-family: 'Readex Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Readex Pro', sans-serif;
-  margin: 0;
-  padding: 0;
+
   height: 100%;
   background-color: rgb(77,137,99);
 }

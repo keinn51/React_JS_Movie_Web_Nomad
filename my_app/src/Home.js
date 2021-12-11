@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import {Link} from "react-router-dom";
-import Group from './Group';
 import styles from "./Home.module.css";
 import Slide from "./Slide";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,22 +7,6 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
 
 function Home() {
-  const [loading, setLoading] = useState(true);
-  const [movies, setMovies] = useState([]);
-
-  const getMovies = async() => {
-    const json = await (
-      await fetch(`https://yts.mx/api/v2/list_movies.json?sort_by=year`)
-    ).json();
-    setMovies(json.data.movies);
-    console.log(json.data.movies);
-  }
-
-  useEffect(() => {
-    getMovies();
-    setLoading(false);
-  }, [])
-
   return (
     <div>
       <div className={styles.container}>
@@ -47,14 +30,7 @@ function Home() {
           <span>romance</span>
         </Link>
       </div>
-
-      <div>
-      {loading
-        ? <h1>Loading...</h1>
-        : 
-        <Slide ytsApi={`https://yts.mx/api/v2/list_movies.json?&genre=romance&sort_by=year`}/>
-      }
-      </div>
+      <Slide ytsApi={`https://yts.mx/api/v2/list_movies.json?limit=10&genre=romance&sort_by=rating`}/>
 
       <div className={styles.title}>
         <Link to={`/page/genre=drama/1`}>
@@ -62,14 +38,7 @@ function Home() {
           <span>drama</span>
         </Link>
       </div>
-
-      <div>
-      {loading
-        ? <h1>Loading...</h1>
-        : 
-        <Slide ytsApi={`https://yts.mx/api/v2/list_movies.json?&genre=drama&sort_by=year`}/>
-      }
-      </div>
+      <Slide ytsApi={`https://yts.mx/api/v2/list_movies.json?limit=10&$genre=drama&sort_by=rating`}/>
 
       <div className={styles.title}>
         <Link to={`/page/genre=animation/1`}>
@@ -77,14 +46,8 @@ function Home() {
           <span>animation</span>
         </Link>
       </div>
+      <Slide ytsApi={`https://yts.mx/api/v2/list_movies.json?limit=10&genre=animation&sort_by=rating`}/>
 
-      <div>
-      {loading
-        ? <h1>Loading...</h1>
-        : 
-        <Slide ytsApi={`https://yts.mx/api/v2/list_movies.json?&genre=animation&sort_by=year`}/>
-      }
-      </div>
     </div>
   )
 }

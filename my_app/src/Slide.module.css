@@ -1,4 +1,45 @@
-.content {
+.container {
+  position: relative;
+}
+
+.slide_show {
+  position: relative;
+  margin: 0 auto ;
+  width: 920px;
+  height: 475px;
+  overflow: hidden;
+}
+
+.slides {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2300px;
+  height: 475px;
+  /* padding-left: 50px; */
   display: flex;
-  flex-direction: row;
+
+  transition: 0.5s;
+}
+
+/* .slides div:first-child{
+  margin-left: 50px;
+}
+
+.slides div:last-child{
+  margin-right: 50px;
+} */
+
+
+.controller button {
+  position: absolute;
+  top: 35%;
+}
+
+.left {
+  left: 80px;
+}
+
+.right {
+  right: 80px;
 }
