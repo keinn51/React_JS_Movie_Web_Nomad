@@ -1,0 +1,50 @@
+.container {
+  position: relative;
+}
+.slide__show {
+  width: 1050px;
+  overflow: hidden;
+
+  position: relative;
+  left: calc(50% - 525px);
+}
+.slide {
+  width: 3500px;
+  padding: 50px 0 0 0;
+  display: flex;
+
+  transition: all 0.4s ease;
+}
+
+.left,
+.right {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #00d2fc;
+  opacity: 0.8;
+  font-size: 44px;
+
+  transition: all 0.4s;
+}
+
+.left:hover,
+.right:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.left {
+  text-shadow: 3px 2px 0 #009efa;
+
+  position: absolute;
+  top: calc(50% - 22px);
+  left: 80px;
+}
+
+.right {
+  text-shadow: -3px 2px 0 #009efa;
+  position: absolute;
+  top: calc(50% - 22px);
+  right: 80px;
+}
