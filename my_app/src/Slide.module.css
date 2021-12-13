@@ -16,19 +16,10 @@
   top: 0;
   width: 2300px;
   height: 475px;
-  /* padding-left: 50px; */
   display: flex;
 
   transition: 0.5s;
 }
-
-/* .slides div:first-child{
-  margin-left: 50px;
-}
-
-.slides div:last-child{
-  margin-right: 50px;
-} */
 
 
 .controller button {

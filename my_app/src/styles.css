@@ -1,12 +1,18 @@
 * {
+  font-family: 'Bakbak One', cursive;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Readex Pro', sans-serif;
+  font-family: 'Bakbak One', cursive;
 
   height: 100%;
   background-color: rgb(77,137,99);
+}
+
+a {
+  font-family: 'Bakbak One', cursive;
+  text-decoration: none;
 }

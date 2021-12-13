@@ -1,0 +1,57 @@
+.movie {
+  color: antiquewhite;
+}
+
+.show {
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  z-index: 2;
+
+  width: 50%;
+  border: 2px solid snow;
+  border-radius: 10px;
+}
+
+.shortView {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px;
+}
+
+
+.shortView_Img {
+  float: left;
+  width: 230px;
+  height: 345px;
+}
+
+.shortView_letters {
+  width: 200px;
+  margin: 20px 0 0 50px;
+}
+
+.shortView_letters h3,
+.shortView_letters p,
+.shortView_letters div {
+  margin: 10px;
+}
+
+.shortView_letters li {
+  list-style-type: none;
+}
+
+.descript {
+  width: 100%;
+  padding: 0 10px 10px 10px;
+}
+
+.Detail_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  min-width: 100%;
+  min-height: 100%;
+  filter: brightness(50%);
+}

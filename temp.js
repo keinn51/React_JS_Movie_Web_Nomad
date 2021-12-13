@@ -25,7 +25,7 @@ function Detail ()
     <div>
     {
       loading 
-      ? <h1>Loading...</h1>
+      ? <h1>Loading... </h1>
       :
       <div>
         {

@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
-import styles from "./Movie.module.css";
+import styles from "./MovieHome.module.css";
 
-function Movie({ id, coverImg, rating, runtime, description_full, title, summary, genres }) {
+function MovieHome({id, coverImg, rating, runtime, description_full, title, summary, genres }) {
   return (
-    <div className={styles.movie_container}>
+    <div className={styles.movie}>
       <img src={coverImg} alt={title} />
       <h3>
         <Link to={`/movie/${id}`}>{title}</Link>
@@ -40,7 +40,7 @@ function Movie({ id, coverImg, rating, runtime, description_full, title, summary
   )
 }
 
-Movie.prototypes = {
+MovieHome.prototypes = {
   id: PropTypes.number.isRequired,
   coverImg: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -48,4 +48,4 @@ Movie.prototypes = {
   genres: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
-export default Movie;
+export default MovieHome;

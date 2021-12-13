@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import {Link} from "react-router-dom";
 import styles from "./Home.module.css";
 import Slide from "./Slide";
@@ -9,6 +8,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 function Home() {
   return (
     <div>
+      {/* Container is the nav bar! */}
       <div className={styles.container}>
         <div>
           <Link to={"/"}>SooFLEX</Link>
@@ -24,6 +24,7 @@ function Home() {
         </div>
       </div>
 
+      {/* Genres == Romance */}
       <div className={styles.title}>
         <Link to={`/page/genre=romance/1`}>
           <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon>
@@ -32,6 +33,7 @@ function Home() {
       </div>
       <Slide ytsApi={`https://yts.mx/api/v2/list_movies.json?limit=10&genre=romance&sort_by=rating`}/>
 
+      {/* Genres == Drama */}
       <div className={styles.title}>
         <Link to={`/page/genre=drama/1`}>
           <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon>
@@ -40,6 +42,8 @@ function Home() {
       </div>
       <Slide ytsApi={`https://yts.mx/api/v2/list_movies.json?limit=10&$genre=drama&sort_by=rating`}/>
 
+
+      {/* Genres == Animation */}
       <div className={styles.title}>
         <Link to={`/page/genre=animation/1`}>
           <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon>

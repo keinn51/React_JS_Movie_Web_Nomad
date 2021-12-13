@@ -1,0 +1,45 @@
+.movie {
+  color: rgb(32, 30, 30);
+}
+
+.show {
+  margin: 10px 10px;
+  float: left;
+  width: 500px;
+  height: 370px;
+  border: 2px solid snow;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.shortView {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px;
+}
+
+
+.shortView_Img {
+  float: left;
+  width: 230px;
+  height: 345px;
+}
+
+.shortView_letters {
+  width: 200px;
+  height: 350px;
+}
+
+.shortView_letters h3,
+.shortView_letters p {
+  margin: 10px;
+}
+
+.shortView_letters li {
+  list-style-type: none;
+}
+
+.summary {
+  width: 100%;
+  padding: 0 10px 10px 10px;
+}
