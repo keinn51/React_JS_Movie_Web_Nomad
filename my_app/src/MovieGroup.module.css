@@ -1,21 +1,24 @@
 .movie {
   color: rgb(32, 30, 30);
+  display: flex;
+  justify-content: center;
+  /* float: left; */
 }
 
 .show {
   margin: 10px 10px;
-  float: left;
   width: 500px;
   height: 370px;
   border: 2px solid snow;
   border-radius: 10px;
   overflow: hidden;
+
 }
 
 .shortView {
   display: flex;
   flex-direction: row;
-  padding: 10px 10px;
+  padding: 10px ;
 }
 
 
@@ -26,8 +29,9 @@
 }
 
 .shortView_letters {
-  width: 200px;
+  width: 250px;
   height: 350px;
+  padding-left: 20px;
 }
 
 .shortView_letters h3,

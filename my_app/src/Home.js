@@ -3,26 +3,22 @@ import styles from "./Home.module.css";
 import Slide from "./Slide";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import Navbar from "./Navbar";
 
 
 function Home() {
   return (
     <div>
       {/* Container is the nav bar! */}
-      <div className={styles.container}>
-        <div>
-          <Link to={"/"}>SooFLEX</Link>
-        </div>
-        <div>
-          <Link to={`/page/minimum_rating=7/1`}>High Rating</Link>
-          <Link to={`/page/genre=romance/1`}>romance</Link>
-          <Link to={`/page/genre=drama/1`}>drama</Link>
-          <Link to={`/page/genre=animation/1`}>animation</Link>
-        </div>
-        <div>
-          <a href={""}>IMG</a>
-        </div>
+      {/* <Navbar /> */}
+
+      <div className={styles.title}>
+        <Link to={`/page/minimum_rating=8/1`}>
+          <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon>
+          <span>High Rating (Over 8)</span>
+        </Link>
       </div>
+      <Slide ytsApi={`https://yts.mx/api/v2/list_movies.json?limit=10&minimum_rating=8&sort_by=rating`}/>
 
       {/* Genres == Romance */}
       <div className={styles.title}>
@@ -33,14 +29,14 @@ function Home() {
       </div>
       <Slide ytsApi={`https://yts.mx/api/v2/list_movies.json?limit=10&genre=romance&sort_by=rating`}/>
 
-      {/* Genres == Drama */}
+      {/* Genres == Music */}
       <div className={styles.title}>
-        <Link to={`/page/genre=drama/1`}>
+        <Link to={`/page/genre=music/1`}>
           <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon>
-          <span>drama</span>
+          <span>music</span>
         </Link>
       </div>
-      <Slide ytsApi={`https://yts.mx/api/v2/list_movies.json?limit=10&$genre=drama&sort_by=rating`}/>
+      <Slide ytsApi={`https://yts.mx/api/v2/list_movies.json?limit=10&genre=music&sort_by=rating`}/>
 
 
       {/* Genres == Animation */}

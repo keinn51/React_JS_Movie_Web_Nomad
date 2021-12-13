@@ -8,7 +8,9 @@ function MovieDetail({ background_image_original, id, coverImg, rating, runtime,
       {/* Background Img */}
       {
         background_image_original ?
-          <p><img className={styles.Detail_bg} src={background_image_original} alt="" /></p>
+          <div className={styles.background}>
+            <img className={styles.Detail_bg} src={background_image_original} alt="" />
+          </div>
           : null
       }
 

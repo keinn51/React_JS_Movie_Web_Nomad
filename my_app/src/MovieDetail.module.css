@@ -2,10 +2,14 @@
   color: antiquewhite;
 }
 
+.background {
+  z-index: -1;
+}
+
 .show {
   position: absolute;
-  top: 5%;
-  left: 20%;
+  top: 25%;
+  left: 25%;
   z-index: 2;
 
   width: 50%;

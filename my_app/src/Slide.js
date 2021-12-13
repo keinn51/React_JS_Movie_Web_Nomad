@@ -53,7 +53,7 @@ function Slide({ ytsApi }) {
                   rating={movie.rating}
                   runtime={movie.runtime}
                   title={movie.title}
-                  style_tag="Home" />
+                   />
               ))
             }
           </div>
