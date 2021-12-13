@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import MovieGroup from "./MovieGroup";
 import { Link } from "react-router-dom"
 import styles from "./Group.module.css";
+import {AllLoading} from "./Atom";
+import { useRecoilState } from 'recoil';
 
 const List_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -10,6 +12,7 @@ const List_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function Group() {
   const { group, page } = useParams();
   const [loading, setLoading] = useState(true);
+  const [allLoding, setAllLoding] = useRecoilState(AllLoading);
   const [movies, setMovies] = useState([]);
 
   const getMovies = async () => {
@@ -18,18 +21,21 @@ function Group() {
     ).json();
     setMovies(json.data.movies);
     setLoading(false);
+    setAllLoding(false);
     // console.log(json.data.movies);
   }
 
   useEffect(() => {
+    setLoading(true);
     getMovies();
-  }, [loading])
+  }, [allLoding])
+
 
 
   return (
     <div className={styles.container}>
       {
-        loading
+        (loading || allLoding)
           ? <h1>Loading...</h1>
           :
           <div className={styles.movies}>
@@ -47,7 +53,7 @@ function Group() {
           </div>
       }
       {
-        loading
+        (loading || allLoding)
           ? null
           :
           <div className={styles.footer}>

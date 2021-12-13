@@ -4,12 +4,15 @@ import styles from "./Slide.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretSquareLeft } from '@fortawesome/free-solid-svg-icons';
 import { faCaretSquareRight } from '@fortawesome/free-solid-svg-icons';
+import {AllLoading} from "./Atom";
+import { useRecoilState } from 'recoil';
 
 
 function Slide({ ytsApi }) {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const [trans, setTrans] = useState(0);
+  const [allLoading, setAllLoading] = useRecoilState(AllLoading);
 
   const onClickL = () => {
     if (trans >= 0) {
@@ -29,18 +32,21 @@ function Slide({ ytsApi }) {
       await fetch(ytsApi)
     ).json();
     setMovies(json.data.movies);
-    console.log(json.data.movies);
-  }
-  useEffect(() => {
-    getMovies();
     setLoading(false);
-  }, [])
+    setAllLoading(false);
+    // console.log(json.data.movies);
+  }
+
+  useEffect(() => {
+    setLoading(true);
+    getMovies();
+  }, [allLoading])
 
 
   return (
     <div className={styles.container}>
       <div className={styles.slide_show}>
-        {loading
+        {(loading || allLoading)
           ? <h1>Loading...</h1>
           :
           <div className={styles.slides} style={{ transform: `translateX(${trans}px)` }}>
@@ -59,8 +65,8 @@ function Slide({ ytsApi }) {
           </div>
         }
       </div>
-      {loading
-          ? <h1>Loading...</h1>
+      {(loading || allLoading)
+          ? null
           :
           <div className={styles.controller}>
             <button className={styles.left} onClick={onClickL}>
