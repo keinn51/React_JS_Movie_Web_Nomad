@@ -27,6 +27,26 @@
   top: 35%;
 }
 
+/* 
+Opacity : the degree of clearness
+
+*/
+.left,
+.right {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: rgb(255,160,154);
+  opacity: 0.8;
+  font-size: 44px;
+}
+
+.left:hover,
+.right:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 .left {
   left: 80px;
 }

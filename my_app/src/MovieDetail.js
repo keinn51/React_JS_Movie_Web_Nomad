@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import styles from "./MovieDetail.module.css";
 
 function MovieDetail({ background_image_original, id, coverImg, rating, runtime, description_full, title, genres }) {
@@ -22,7 +21,7 @@ function MovieDetail({ background_image_original, id, coverImg, rating, runtime,
           </div>
           <div className={styles.shortView_letters}>
             <h3>
-              <Link to={`/movie/${id}`}>{title}</Link>
+              {title}
             </h3>
             <p>{rating ? `rating: ${rating} / 10` : null}</p>
             <p>{runtime ? `runtime: ${runtime} (min)` : null}</p>

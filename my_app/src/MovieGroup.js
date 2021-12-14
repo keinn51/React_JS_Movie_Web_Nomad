@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./MovieGroup.module.css";
 
 function MovieGroup({ id, coverImg, title, rating, runtime, year, summary }) {

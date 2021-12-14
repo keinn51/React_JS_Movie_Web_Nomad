@@ -1,9 +1,25 @@
 .container {
     position: relative;
     width: 100%;
+    height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: rgb(237,239,233);
     z-index: 10;
   }
+
+.container a{
+  position: relative;
+  top: 20%;
+}
+
+.GroupLink {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.GroupLink a {
+  margin: 0px 10px;
+}

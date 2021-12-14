@@ -4,8 +4,9 @@ import styles from "./Slide.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretSquareLeft } from '@fortawesome/free-solid-svg-icons';
 import { faCaretSquareRight } from '@fortawesome/free-solid-svg-icons';
-import {AllLoading} from "./Atom";
+import { AllLoading } from "./Atom";
 import { useRecoilState } from 'recoil';
+import Load from './Load';
 
 
 function Slide({ ytsApi }) {
@@ -47,7 +48,7 @@ function Slide({ ytsApi }) {
     <div className={styles.container}>
       <div className={styles.slide_show}>
         {(loading || allLoading)
-          ? <h1>Loading...</h1>
+          ? <Load />
           :
           <div className={styles.slides} style={{ transform: `translateX(${trans}px)` }}>
             {
@@ -59,24 +60,24 @@ function Slide({ ytsApi }) {
                   rating={movie.rating}
                   runtime={movie.runtime}
                   title={movie.title}
-                   />
+                />
               ))
             }
           </div>
         }
       </div>
       {(loading || allLoading)
-          ? null
-          :
-          <div className={styles.controller}>
-            <button className={styles.left} onClick={onClickL}>
-              <FontAwesomeIcon icon={faCaretSquareLeft}></FontAwesomeIcon>
-            </button>
-            <button className={styles.right} onClick={onClickR}>
-              <FontAwesomeIcon icon={faCaretSquareRight}></FontAwesomeIcon>
-            </button>
-          </div>
-        }
+        ? null
+        :
+        <div className={styles.controller}>
+          <button className={styles.left} onClick={onClickL}>
+            <FontAwesomeIcon icon={faCaretSquareLeft}></FontAwesomeIcon>
+          </button>
+          <button className={styles.right} onClick={onClickR}>
+            <FontAwesomeIcon icon={faCaretSquareRight}></FontAwesomeIcon>
+          </button>
+        </div>
+      }
     </div>
   )
 }
