@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import styles from "./MovieGroup.module.css";
+import styles from "./MovieSearch.module.css";
 
-function MovieGroup({ id, coverImg, title, rating, runtime, year, summary }) {
+function MovieSearch({ id, coverImg, title, rating, runtime, year, summary }) {
 
   return (
     <div className={styles.movie}>
@@ -13,14 +13,22 @@ function MovieGroup({ id, coverImg, title, rating, runtime, year, summary }) {
           <div className={styles.shortView_Img}>
             <img src={coverImg} alt={title} />
           </div>
-          <div className={styles.shortView_letters}>
-            <h3>
-              <Link to={`/movie/${id}`}>{title}</Link>
-            </h3>
+          <div className={styles.letters}>
+            <div className={styles.title}>
+              <div>
+                <h3>
+                  <Link to={`/movie/${id}`}>
+                    {(title.length > 35)
+                      ? `${title.slice(0, 35)}...`
+                      : title}
+                  </Link>
+                </h3>
+              </div>
+            </div>
             <p>{year ? `year: ${year}` : null}</p>
             <p>{rating ? `rating: ${rating} / 10` : null}</p>
             <p>{runtime ? `runtime: ${runtime} (min)` : null}</p>
-            <p>{summary ? summary : null}</p>
+            <p>{summary ? (summary.length > 180 ? `${summary.slice(0, 180)}...` : summary) : null}</p>
           </div>
         </div>
       </div>
@@ -28,7 +36,7 @@ function MovieGroup({ id, coverImg, title, rating, runtime, year, summary }) {
   )
 }
 
-MovieGroup.prototypes = {
+MovieSearch.prototypes = {
   id: PropTypes.number.isRequired,
   coverImg: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -38,4 +46,4 @@ MovieGroup.prototypes = {
   summary: PropTypes.string
 }
 
-export default MovieGroup;
+export default MovieSearch;

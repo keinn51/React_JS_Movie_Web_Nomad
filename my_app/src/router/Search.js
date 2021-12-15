@@ -1,68 +1,27 @@
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import MovieSearch from "../render/MovieSearch";
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import styles from "./Search.module.css";
 import Load from '../component/Load';
 
-const List_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const List_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function Search() {
   const { search, lst } = useParams();
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [index, setIndex] = useState(1);
-  const [pageIndex, setPageIndex] = useState(1);
   const [movArr, setMovArr] = useState([]);
-
-  // const getMovies = async () => {
-  //   let json = await (
-  //       await fetch(`https://yts.mx/api/v2/list_movies.json?page=${pageIndex}&sort_by=rating`)
-  //     ).json();
-  //     setMovies(json.data.movies);
-
-  //   console.log(movies)
-  // }
 
   const getMovies =  () => {
     console.log(`getmovie`)
-      fetch(`https://yts.mx/api/v2/list_movies.json?page=${pageIndex}&sort_by=rating`)
-        .then((res) => res.json())
-        .then((json) => setMovies(json.data.movies))
-      setLoading(false);
-  }
-
-  const countMovie = () => {
-
-    for (let i = (index - 1); i < 20; i++) {
-      if ((movies[i].summary.indexOf(search) !== -1
-        || movies[i].description_full.indexOf(search) !== -1
-        || movies[i].title.indexOf(search) !== -1)
-        && index < 20 && movArr.length < 20) {
-        setIndex((curr) => curr + 1);
-        setMovArr([...movArr, movies[i]]);
-      }
-      else if (index === 20 && movArr.length < 20) {
-        setPageIndex((curr) => curr + 1);
-        setIndex(1);
-        break;
-      }
-      else if (index < 20 && movArr.length === 20) {
+    for (let i = 1 ; i <= 100; i++)
+    {
+      fetch(`https://yts.mx/api/v2/list_movies.json?page=${i}&sort_by=rating`)
+      .then((res) => res.json())
+      .then((json) => setMovies(json.data.movies))
+      if (i === 100)
         setLoading(false);
-        return;
-      }
-    }
-
-    console.log("countMovie")
-    console.log(movArr)
-
-    if (movArr.length === 20) {
-      setLoading(false);
-      return;
-    }
-    else if (index === 20) {
-      setPageIndex((curr) => curr + 1);
-      setIndex(1);
     }
   }
 
@@ -70,22 +29,21 @@ function Search() {
     setLoading(true);
     setMovArr([]);
     getMovies();
-  }, [lst])
+    console.log(`lst : ${lst}`)
+    console.log(`search: ${search}`)
+  }, [search])
 
-  useEffect(() => {
+    useEffect(() => {
     if (movies.length === 0)
       return ;
-    getMovies();
-  }, [pageIndex])
-
-  useEffect(() => {
-    if (movies.length === 0)
-      return ;
-    countMovie();
-    console.log(`useEffect`)
+    else
+    {
+      setMovArr(([ movArr, ...[movies.filter((movie) => (movie.summary.toLowerCase().indexOf(search.toLowerCase()) !== -1 
+        || movie.description_full.toLowerCase().indexOf(search.toLowerCase()) !== -1 
+        || movie.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
+        ))]]).flat())
+    }
     console.log(movies)
-    countMovie();
-
   }, [movies])
 
   return (
@@ -108,7 +66,7 @@ function Search() {
             ))}
           </div>
       }
-      {
+      {/* {
         (loading)
           ? null
           :
@@ -127,7 +85,7 @@ function Search() {
               }
             </div>
           </div>
-      }
+      } */}
     </div>
   )
 }

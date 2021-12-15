@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
-import MovieGroup from "./MovieGroup";
+import MovieGroup from "../render/MovieGroup";
 import { Link } from "react-router-dom"
 import styles from "./Group.module.css";
-import Load from './Load';
+import Load from '../component/Load';
 
 const List_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
 
 function Group() {
   const { group, page } = useParams();
@@ -14,14 +13,17 @@ function Group() {
   const [movies, setMovies] = useState([]);
 
   const getMovies = async () => {
+    console.log(`getMovie`)
     const json = await (
       await fetch(`https://yts.mx/api/v2/list_movies.json?page=${page}&${group}&sort_by=rating`)
     ).json();
     setMovies(json.data.movies);
     setLoading(false);
+    console.log(movies[0])
   }
 
   useEffect(() => {
+    console.log(`useEffect`)
     setLoading(true);
     getMovies();
   }, [group, page])
@@ -56,6 +58,7 @@ function Group() {
                 List_arr.map((lst) => {
                   return (
                     <Link
+                      key={lst}
                       to={`/page/${group}/${lst}`}
                     >
                       {lst}</Link>

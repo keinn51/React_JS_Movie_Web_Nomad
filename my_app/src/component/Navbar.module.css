@@ -1,0 +1,43 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(237,239,233);
+    z-index: 10;
+  }
+
+.GroupLink a,
+.pageName a{
+  margin: 0px 10px;
+  position: relative;
+  top: 20%;
+  font-size: 20px;
+}
+
+.GroupLink,
+.Link {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.searchBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.searchBar input {
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.searchBar button {
+  border: none;
+  cursor: pointer;
+}

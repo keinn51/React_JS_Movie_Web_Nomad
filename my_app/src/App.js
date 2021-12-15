@@ -4,10 +4,11 @@ import {
   Route
 } from "react-router-dom";
 import { RecoilRoot } from 'recoil';
-import Home from "./Home";
-import Group from "./Group";
-import Detail from './Detail';
-import Navbar from "./Navbar";
+import Home from "./router/Home";
+import Group from "./router/Group";
+import Detail from './router/Detail';
+import Search from './router/Search';
+import Navbar from "./component/Navbar";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path={"/"} element={<Home />} />
           <Route path={`/page/:group/:page`} element={<Group />} />
           <Route path={`/movie/:id`} element={<Detail />} />
+          <Route path={`/search/:search/:lst`} element={<Search />} />
         </Routes>
       </Router>
     </RecoilRoot>

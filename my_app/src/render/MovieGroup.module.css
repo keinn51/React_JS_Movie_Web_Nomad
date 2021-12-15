@@ -28,19 +28,31 @@
   height: 345px;
 }
 
-.shortView_letters {
+.letters {
   width: 250px;
   height: 350px;
   padding-left: 20px;
 }
 
-.shortView_letters h3,
-.shortView_letters p {
+.title {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.letters h3,
+.letters p {
   margin: 10px;
 }
 
-.shortView_letters li {
+.letters li {
   list-style-type: none;
+}
+
+.letters p {
+  word-break: break-all;
+  text-align: justify;
 }
 
 .summary {

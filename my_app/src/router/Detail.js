@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom"
-import MovieDetail from "./MovieDetail"
+import MovieDetail from "../render/MovieDetail"
 import styles from "./Detail.module.css";
-import Load from './Load';
+import Load from '../component/Load';
 
 function Detail() {
   const { id } = useParams();
@@ -20,7 +20,7 @@ function Detail() {
 
   useEffect(() => {
     getMovie();
-  }, []);
+  });
 
   return (
     <div className={styles.container}>

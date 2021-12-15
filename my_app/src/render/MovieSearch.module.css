@@ -1,0 +1,61 @@
+.movie {
+  color: rgb(32, 30, 30);
+  display: flex;
+  justify-content: center;
+  /* float: left; */
+}
+
+.show {
+  margin: 10px 10px;
+  width: 500px;
+  height: 370px;
+  border: 2px solid snow;
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+.shortView {
+  display: flex;
+  flex-direction: row;
+  padding: 10px ;
+}
+
+
+.shortView_Img {
+  float: left;
+  width: 230px;
+  height: 345px;
+}
+
+.letters {
+  width: 250px;
+  height: 350px;
+  padding-left: 20px;
+}
+
+.title {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.letters h3,
+.letters p {
+  margin: 10px;
+}
+
+.letters li {
+  list-style-type: none;
+}
+
+.letters p {
+  word-break: break-all;
+  text-align: justify;
+}
+
+.summary {
+  width: 100%;
+  padding: 0 10px 10px 10px;
+}
