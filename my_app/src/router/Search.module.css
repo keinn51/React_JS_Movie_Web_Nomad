@@ -1,12 +1,33 @@
 .container {
   height: 100%;
+  padding-top: 30px;
+}
+
+.Santacontainer {
+  height: 100%;
+  padding-top: 30px;
+  /* background-image: linear-gradient(to top, #6ad6a7 0%, #06a573 100%); */
+  /* background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fblzxwm%2FbtqAqgVjkGh%2FMpGc4kzDyY9V6mk4DCrXnK%2Fimg.jpg");
+  background-size:contain; */
+  color: antiquewhite;
+}
+
+.Santacontainer::after{
+  background: url("http://tpholic.com/xe/files/attach/images/76/610/519/001/%EB%8B%AC%ED%8C%BD%EC%9D%B4.jpg");
+  content: "";
+  opacity: 0.7;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-size: contain;
 }
 
 .movies {
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(500px, auto));
-
-
 }
 
 .footer {

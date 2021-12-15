@@ -5,11 +5,13 @@ import styles from "./MovieHome.module.css";
 function MovieHome({ id, coverImg, rating, runtime, title }) {
   return (
     <div className={styles.movie}>
-      <img src={coverImg} alt={title} />
+      <Link to={`/movie/${id}`}>
+        <img src={coverImg} alt={title} />
+      </Link>
       <div className={styles.letters}>
         <div className={styles.title}>
           <div>
-            <h3>
+            <h3 className={styles.movieName}>
               <Link to={`/movie/${id}`}>
                 {(title.length > 35)
                   ? `${title.slice(0, 35)}...`

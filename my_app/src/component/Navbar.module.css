@@ -10,12 +10,23 @@
     z-index: 10;
   }
 
-.GroupLink a,
-.pageName a{
-  margin: 0px 10px;
+.GroupLink a
+{
+  margin: 0px 20px;
   position: relative;
   top: 20%;
   font-size: 20px;
+}
+
+.pageName {
+  position: relative;
+  top: 20%;
+  font-size: 20px;
+  text-shadow: 5px 5px #c7cdd4;
+}
+
+.pageName:hover {
+  transform: scale(1.1);
 }
 
 .GroupLink,
@@ -23,7 +34,19 @@
   display: flex;
   flex-direction: row;
   align-content: center;
+  text-shadow: 5px 5px #c7cdd4;
 }
+
+.Link_sep:hover {
+  transform: scale(1.1);
+}
+
+.MerryChristMas a {
+  color: green;
+  text-shadow: 3px 3px #fcadad;
+}
+
+.MerryChristMas a:visited { color: green; text-decoration: none;}
 
 .searchBar {
   display: flex;
@@ -32,8 +55,10 @@
 }
 
 .searchBar input {
+  height: 30px;
+  margin-right: 10px;
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 20px;
   text-align: center;
 }
 

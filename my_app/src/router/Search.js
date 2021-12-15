@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import MovieSearch from "../render/MovieSearch";
-// import { Link } from "react-router-dom"
 import styles from "./Search.module.css";
 import Load from '../component/Load';
 
-// const List_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function Search() {
   const { search, lst } = useParams();
@@ -13,15 +11,14 @@ function Search() {
   const [loading, setLoading] = useState(true);
   const [movArr, setMovArr] = useState([]);
 
-  const getMovies =  () => {
+  const getMovies = () => {
     console.log(`getmovie`)
-    for (let i = 1 ; i <= 100; i++)
-    {
+    for (let i = 1; i <= 100; i++) {
       fetch(`https://yts.mx/api/v2/list_movies.json?page=${i}&sort_by=rating`)
-      .then((res) => res.json())
-      .then((json) => setMovies(json.data.movies))
-      if (i === 100)
-        setLoading(false);
+        .then((res) => res.json())
+        .then((json) => setMovies(json.data.movies))
+        .then((i === 100) ? setLoading(false) : null)
+
     }
   }
 
@@ -33,21 +30,22 @@ function Search() {
     console.log(`search: ${search}`)
   }, [search])
 
-    useEffect(() => {
+  useEffect(() => {
     if (movies.length === 0)
-      return ;
-    else
     {
-      setMovArr(([ movArr, ...[movies.filter((movie) => (movie.summary.toLowerCase().indexOf(search.toLowerCase()) !== -1 
-        || movie.description_full.toLowerCase().indexOf(search.toLowerCase()) !== -1 
+      return;
+    }
+    else {
+      setMovArr(([movArr, ...[movies.filter((movie) => (movie.summary.toLowerCase().indexOf(search.toLowerCase()) !== -1
+        || movie.description_full.toLowerCase().indexOf(search.toLowerCase()) !== -1
         || movie.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
-        ))]]).flat())
+      ))]]).flat().sort((a, b) => b['rating'] - a['rating']))
     }
     console.log(movies)
   }, [movies])
 
   return (
-    <div className={styles.container}>
+    <div className={(search.toLowerCase() === "christmas") ? styles.Santacontainer : styles.container}>
       {
         (loading)
           ? <Load />
@@ -62,30 +60,12 @@ function Search() {
                 rating={movie.rating}
                 runtime={movie.runtime}
                 summary={movie.summary}
-                year={movie.year} />
+                year={movie.year} 
+                santa={search}
+                />
             ))}
           </div>
       }
-      {/* {
-        (loading)
-          ? null
-          :
-          <div className={styles.footer}>
-            <div className={styles.list}>
-              {
-                List_arr.map((lst) => {
-                  return (
-                    <Link
-                      key={lst}
-                      to={`/search/${search}/${lst}`}
-                    >
-                      {lst}</Link>
-                  )
-                })
-              }
-            </div>
-          </div>
-      } */}
     </div>
   )
 }

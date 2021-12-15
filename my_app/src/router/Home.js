@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 import Slide from "../component/Slide";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { faCompactDisc } from '@fortawesome/free-solid-svg-icons'
 import { Group_obj, Group_key_arr } from "../atom/NavList"
 
 function Home() {
@@ -13,10 +13,14 @@ function Home() {
         return (
           <div key={group}>
             <div className={styles.title}>
-              <Link to={`/page/${Group_obj[group]}/1`}>
-                <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon>
-                <span>{group}</span>
-              </Link>
+              <div className={styles.titleBox}>
+                <Link to={`/page/${Group_obj[group]}/1`}
+                style={{"display":"flex", "flex-direction":"row", "alignContent":"center"}}>
+                  <div className={styles.titleImg}><FontAwesomeIcon icon={faCompactDisc}
+                  ></FontAwesomeIcon></div>
+                  <div><span>{group}</span></div>
+                </Link>
+              </div>
             </div>
             <Slide ytsApi={`https://yts.mx/api/v2/list_movies.json?limit=10&${Group_obj[group]}&sort_by=rating`} />
           </div>

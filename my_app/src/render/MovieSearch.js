@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./MovieSearch.module.css";
 
-function MovieSearch({ id, coverImg, title, rating, runtime, year, summary }) {
+function MovieSearch({ id, coverImg, title, rating, runtime, year, summary, santa}) {
 
   return (
-    <div className={styles.movie}>
+    <div className={(santa.toLowerCase() === "christmas") ? styles.Santamovie : styles.movie}>
 
       {/* ShortView (Img, Title, rating, runtime...) */}
       <div className={styles.show}>
@@ -16,8 +16,11 @@ function MovieSearch({ id, coverImg, title, rating, runtime, year, summary }) {
           <div className={styles.letters}>
             <div className={styles.title}>
               <div>
-                <h3>
-                  <Link to={`/movie/${id}`}>
+                <h3 >
+                  <Link to={`/movie/${id}`}
+                  style={(santa.toLowerCase() === "christmas") ? {"color":"red",
+                  "text-shadow": "2px 2px rgb(10,110,0)",
+                  "-webkit-text-stroke":"red"} : null}>
                     {(title.length > 35)
                       ? `${title.slice(0, 35)}...`
                       : title}

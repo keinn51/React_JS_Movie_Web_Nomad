@@ -1,12 +1,22 @@
 .title {
-  width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  /* text-align: center; */
   margin: 4% 0px;
   font-size: 40px;
 }
 
 .title span {
-  margin-left: 20px;
+  margin: 10px;
+  text-shadow: 5px 5px rgb(136, 143, 141);
+}
+
+.titleBox:hover {
+  transform: scale(1.1);
+}
+
+.titleImg {
+  padding-top: 5px;
 }
 
 .footer {
