@@ -1,9 +1,13 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./MovieGroup.module.css";
+import default_Img from "./Img/default_Img.jpeg";
+
+const onErrorImg = (e) => {
+  e.target.src = default_Img;
+}
 
 function MovieGroup({ id, coverImg, title, rating, runtime, year, summary }) {
-
   return (
     <div className={styles.movie}>
 
@@ -11,7 +15,7 @@ function MovieGroup({ id, coverImg, title, rating, runtime, year, summary }) {
       <div className={styles.show}>
         <div className={styles.shortView}>
           <div className={styles.shortView_Img}>
-            <img src={coverImg} alt={title} />
+            <img src={coverImg} alt={title} onError={onErrorImg} />
           </div>
           <div className={styles.letters}>
             <div className={styles.title}>

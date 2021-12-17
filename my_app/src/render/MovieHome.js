@@ -1,12 +1,17 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./MovieHome.module.css";
+import default_Img from "./Img/default_Img.jpeg";
+
+const onErrorImg = (e) => {
+  e.target.src = default_Img;
+}
 
 function MovieHome({ id, coverImg, rating, runtime, title }) {
   return (
     <div className={styles.movie}>
       <Link to={`/movie/${id}`}>
-        <img src={coverImg} alt={title} />
+        <img src={coverImg} alt={title} onError={onErrorImg}/>
       </Link>
       <div className={styles.letters}>
         <div className={styles.title}>

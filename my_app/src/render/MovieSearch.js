@@ -1,6 +1,11 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./MovieSearch.module.css";
+import default_Img from "./Img/default_Img.jpeg";
+
+const onErrorImg = (e) => {
+  e.target.src = default_Img;
+}
 
 function MovieSearch({ id, coverImg, title, rating, runtime, year, summary, santa}) {
 
@@ -11,7 +16,7 @@ function MovieSearch({ id, coverImg, title, rating, runtime, year, summary, sant
       <div className={styles.show}>
         <div className={styles.shortView}>
           <div className={styles.shortView_Img}>
-            <img src={coverImg} alt={title} />
+            <img src={coverImg} alt={title} onError={onErrorImg}/>
           </div>
           <div className={styles.letters}>
             <div className={styles.title}>
@@ -19,8 +24,8 @@ function MovieSearch({ id, coverImg, title, rating, runtime, year, summary, sant
                 <h3 >
                   <Link to={`/movie/${id}`}
                   style={(santa.toLowerCase() === "christmas") ? {"color":"red",
-                  "text-shadow": "2px 2px rgb(10,110,0)",
-                  "-webkit-text-stroke":"red"} : null}>
+                  "textShadow": "2px 2px rgb(10,110,0)",
+                  "WebkitTextStroke":"red"} : null}>
                     {(title.length > 35)
                       ? `${title.slice(0, 35)}...`
                       : title}

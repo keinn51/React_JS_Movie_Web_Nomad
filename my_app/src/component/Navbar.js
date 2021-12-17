@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Group_obj, Group_key_arr } from "../atom/NavList";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 function Navbar() {
     const [search, setSearch] = useState(null);
@@ -40,12 +40,12 @@ function Navbar() {
                         <input
                             type="text"
                             placeholder="Search Movie!"
-                            value={search}
+                            value={search || ""}
                             onChange={searchClick}
                             onMouseOut={() => {setSearch("")}}
                             >
                         </input>
-                        <Link to={`/search/${search}/1`}>
+                        <Link to={`/search/${(search === 'christ mas') ? 'christmas' : search}/1`}>
                             <button>
                                 <FontAwesomeIcon icon={faSearch} size="lg" />
                             </button>

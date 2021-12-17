@@ -13,19 +13,20 @@ function Group() {
   const [movies, setMovies] = useState([]);
 
   const getMovies = async () => {
-    console.log(`getMovie`)
+    // console.log(`getMovie`)
     const json = await (
       await fetch(`https://yts.mx/api/v2/list_movies.json?page=${page}&${group}&sort_by=rating`)
     ).json();
     setMovies(json.data.movies);
     setLoading(false);
-    console.log(movies[0])
+    // console.log(movies[0])
   }
 
   useEffect(() => {
-    console.log(`useEffect`)
+    // console.log(`useEffect`)
     setLoading(true);
     getMovies();
+    return ;
   }, [group, page])
 
   return (

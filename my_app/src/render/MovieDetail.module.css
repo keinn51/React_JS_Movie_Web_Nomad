@@ -6,6 +6,11 @@
   z-index: -1;
 }
 
+.background img {
+  height: 100%;
+  width: 100%;
+}
+
 .show {
   position: absolute;
   top: 25%;

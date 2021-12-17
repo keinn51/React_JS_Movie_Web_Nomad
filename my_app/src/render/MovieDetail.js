@@ -1,23 +1,28 @@
 import PropTypes from "prop-types";
 import styles from "./MovieDetail.module.css";
+import default_Img from "./Img/default_Img.jpeg";
+import default_Back_Img from "./Img/default_back.jpeg";
 
-function MovieDetail({ background_image_original, id, coverImg, rating, runtime, description_full, title, genres }) {
+const onErrorImg = (e) => {
+  e.target.src = default_Img;
+}
+
+const onErrorBackImg = (e) => {
+  e.target.src = default_Back_Img;
+}
+
+function MovieDetail({ background_image_original, coverImg, rating, runtime, description_full, title, genres }) {
   return (
     <div className={styles.movie}>
       {/* Background Img */}
-      {
-        background_image_original ?
-          <div className={styles.background}>
-            <img className={styles.Detail_bg} src={background_image_original} alt="" />
-          </div>
-          : null
-      }
-
+      <div className={styles.background}>
+        <img className={styles.Detail_bg} src={background_image_original} alt="" onError={onErrorBackImg} />
+      </div>
       {/* ShortView (Img, Title, rating, runtime...) */}
       <div className={styles.show}>
         <div className={styles.shortView}>
           <div className={styles.shortView_Img}>
-            <img src={coverImg} alt={title} />
+            <img src={coverImg} alt={title} onError={onErrorImg} />
           </div>
           <div className={styles.shortView_letters}>
             <h3>
@@ -50,7 +55,7 @@ function MovieDetail({ background_image_original, id, coverImg, rating, runtime,
 }
 
 MovieDetail.prototypes = {
-  id: PropTypes.number.isRequired,
+  background_image_original: PropTypes.string.isRequired,
   rating: PropTypes.number,
   runtime: PropTypes.number,
   coverImg: PropTypes.string.isRequired,

@@ -12,6 +12,11 @@
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
+.movie img {
+  width: 230px;
+  height: 345px;
+}
+
 .movieName {
   text-shadow: 3px 3px #a7b6b8;
 }

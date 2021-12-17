@@ -46,16 +46,23 @@ function Slide({ ytsApi }) {
           :
           <div className={styles.slides} style={{ transform: `translateX(${trans}px)` }}>
             {
-              movies.map((movie) => (
-                <MovieHome
-                  key={movie.id}
-                  id={movie.id}
-                  coverImg={movie.medium_cover_image}
-                  rating={movie.rating}
-                  runtime={movie.runtime}
-                  title={movie.title}
-                />
-              ))
+              movies.map((movie) => {
+                if (movie.medium_cover_image != null)
+                {
+                  return (
+                    (
+                      <MovieHome
+                        key={movie.id}
+                        id={movie.id}
+                        coverImg={movie.medium_cover_image}
+                        rating={movie.rating}
+                        runtime={movie.runtime}
+                        title={movie.title}
+                      />
+                    )
+                  )
+                }
+              })
             }
           </div>
         }

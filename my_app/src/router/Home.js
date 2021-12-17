@@ -15,7 +15,7 @@ function Home() {
             <div className={styles.title}>
               <div className={styles.titleBox}>
                 <Link to={`/page/${Group_obj[group]}/1`}
-                style={{"display":"flex", "flex-direction":"row", "alignContent":"center"}}>
+                style={{"display":"flex", "flexDirection":"row", "alignContent":"center"}}>
                   <div className={styles.titleImg}><FontAwesomeIcon icon={faCompactDisc}
                   ></FontAwesomeIcon></div>
                   <div><span>{group}</span></div>
