@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import styles from "./MovieHome.module.css";
+import styles from "./MovieSlide.module.css";
 import default_Img from "./Img/default_Img.jpeg";
 
 const onErrorImg = (e) => {
   e.target.src = default_Img;
 }
 
-function MovieHome({ id, coverImg, rating, runtime, title }) {
+function MovieSlide({ id, coverImg, rating, runtime, title }) {
   return (
     <div className={styles.movie}>
       <Link to={`/movie/${id}`}>
@@ -32,7 +32,7 @@ function MovieHome({ id, coverImg, rating, runtime, title }) {
   )
 }
 
-MovieHome.prototypes = {
+MovieSlide.prototypes = {
   id: PropTypes.number.isRequired,
   coverImg: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -40,4 +40,4 @@ MovieHome.prototypes = {
   genres: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
-export default MovieHome;
+export default MovieSlide;

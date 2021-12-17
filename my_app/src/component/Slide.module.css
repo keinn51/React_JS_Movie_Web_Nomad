@@ -2,6 +2,8 @@
   position: relative;
 }
 
+/* 920px : (230 * 4) => rendering! , 475px : 345px + letters */
+/* overflow -> hidden : so the other movie container doesn't show */
 .slide_show {
   position: relative;
   margin: 0 auto ;

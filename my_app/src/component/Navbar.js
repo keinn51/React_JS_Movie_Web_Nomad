@@ -8,15 +8,20 @@ import { useState } from "react"
 function Navbar() {
     const [search, setSearch] = useState(null);
 
+    // Event when u touch the Search Bar!
     const searchClick = (event) => {
         setSearch(event.target.value)
     }
 
     return (
+        // It's the Navigation Bar, always above the container!!
         <div className={styles.container}>
+            {/*  Page Name */}
             <div className={styles.pageName}>
                 <Link to={"/"} >SooFLEX</Link>
             </div>
+
+            {/* Group Links */}
             <div className={styles.GroupLink}>
                 {
                     Group_key_arr.map((key) => {
@@ -31,21 +36,25 @@ function Navbar() {
                         )
                     })
                 }
-            <div className={styles.MerryChristMas}><Link to={`/search/christmas/1`}>Christmas🎄</Link></div>
-
+                {/* 🎄 Merry Christmas! */}
+                <div className={styles.MerryChristMas}><Link to={`/search/christmas/1`}>Christmas🎄</Link></div>
             </div>
+
+            {/* Search Bar */}
             <div className={styles.searchBar}>
                 <div>
                     <form>
+                        {/* Search Text */}
                         <input
                             type="text"
                             placeholder="Search Movie!"
-                            value={search || ""}
+                            value={search}
                             onChange={searchClick}
-                            onMouseOut={() => {setSearch("")}}
-                            >
+                            onMouseOut={() => { setSearch("") }}
+                        >
                         </input>
-                        <Link to={`/search/${(search === 'christ mas') ? 'christmas' : search}/1`}>
+                        {/* Search Button */}
+                        <Link to={`/search/${search}/1`}>
                             <button>
                                 <FontAwesomeIcon icon={faSearch} size="lg" />
                             </button>

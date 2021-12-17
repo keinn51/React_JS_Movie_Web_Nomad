@@ -19,7 +19,7 @@
   right: 0px;
   bottom: 0px;
   z-index: -1;
-  background-size: contain;
+  background-size: full;
 }
 
 .movies {

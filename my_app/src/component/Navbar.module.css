@@ -1,68 +1,78 @@
+/* All the container! */
 .container {
-    position: relative;
-    width: 100%;
-    height: 50px;
-    padding: 0px 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: rgb(237,239,233);
-    z-index: 10;
-  }
+  position: relative;
+  width: 100%;
+  height: 50px;
+  padding: 0px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(237,239,233);
+  z-index: 10;
+}
 
+/* Have to Seperate because the Search bar has a tag! */
 .GroupLink a
 {
-  margin: 0px 20px;
-  position: relative;
-  top: 20%;
-  font-size: 20px;
+margin: 0px 20px;
+position: relative;
+top: 20%;
+font-size: 20px;
 }
 
+/* text shadow : text Shadowing with 5px (width) 5px (height) color */
 .pageName {
-  position: relative;
-  top: 20%;
-  font-size: 20px;
-  text-shadow: 5px 5px #c7cdd4;
+position: relative;
+top: 20%;
+font-size: 20px;
+text-shadow: 5px 5px #c7cdd4;
 }
 
+/* When you touch the pageName, it would be bigger */
 .pageName:hover {
-  transform: scale(1.1);
+transform: scale(1.1);
 }
 
 .GroupLink,
 .Link {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  text-shadow: 5px 5px #c7cdd4;
+display: flex;
+flex-direction: row;
+align-content: center;
+text-shadow: 5px 5px #c7cdd4;
 }
 
+/* When you touch the GroupLink, it would be bigger */
 .Link_sep:hover {
-  transform: scale(1.1);
+transform: scale(1.1);
 }
 
+/* Merry Christmas~ */
 .MerryChristMas a {
-  color: green;
-  text-shadow: 3px 3px #fcadad;
+color: green;
+text-shadow: 3px 3px #fcadad;
 }
 
+/* A tag's color which clicked will be green with no underline (red when hover)*/
 .MerryChristMas a:visited { color: green; text-decoration: none;}
+.MerryChristMas a:hover { color: rgb(206, 15, 15); text-decoration: none;}
 
+/* Search Bar moves to center */
 .searchBar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
 
+/* height : search text height, text-align : moves to center */
 .searchBar input {
-  height: 30px;
-  margin-right: 10px;
-  border: 1px solid black;
-  border-radius: 20px;
-  text-align: center;
+height: 30px;
+margin-right: 10px;
+border: 1px solid black;
+border-radius: 20px;
+text-align: center;
 }
 
 .searchBar button {
-  border: none;
-  cursor: pointer;
+border: none;
+cursor: pointer;
 }
