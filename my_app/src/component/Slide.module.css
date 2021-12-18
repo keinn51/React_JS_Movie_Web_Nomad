@@ -12,6 +12,8 @@
   overflow: hidden;
 }
 
+/* 2300px : (230 * 10) => slide has 10 movie container!
+  transition : move left or right slowly */
 .slides {
   position: absolute;
   left: 0;
@@ -31,7 +33,6 @@
 
 /* 
 Opacity : the degree of clearness
-
 */
 .left,
 .right {
@@ -43,6 +44,7 @@ Opacity : the degree of clearness
   font-size: 44px;
 }
 
+/* cursor : cursor theme */
 .left:hover,
 .right:hover {
   cursor: pointer;

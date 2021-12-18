@@ -21,9 +21,11 @@ function MovieDetail({ background_image_original, coverImg, rating, runtime, des
       {/* ShortView (Img, Title, rating, runtime...) */}
       <div className={styles.show}>
         <div className={styles.shortView}>
+          {/* Img */}
           <div className={styles.shortView_Img}>
             <img src={coverImg} alt={title} onError={onErrorImg} />
           </div>
+          {/* title, rating, runtime, genre */}
           <div className={styles.shortView_letters}>
             <h3>
               {title}
@@ -32,6 +34,7 @@ function MovieDetail({ background_image_original, coverImg, rating, runtime, des
             <p>{runtime ? `runtime: ${runtime} (min)` : null}</p>
             {
               genres ?
+                // genre is the 'array'
                 <div>
                   <b>{'genres'}</b>
                   <ul>{genres.map(g => <li key={g}>{g}</li>)}</ul>

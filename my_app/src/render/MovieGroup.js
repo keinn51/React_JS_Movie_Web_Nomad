@@ -14,6 +14,7 @@ function MovieGroup({ id, coverImg, title, rating, runtime, year, summary }) {
       {/* ShortView (Img, Title, rating, runtime...) */}
       <div className={styles.show}>
         <div className={styles.shortView}>
+          {/* Img */}
           <div className={styles.shortView_Img}>
             <img src={coverImg} alt={title} onError={onErrorImg} />
           </div>
