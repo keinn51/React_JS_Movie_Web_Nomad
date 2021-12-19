@@ -5,6 +5,9 @@ Making my own movie web site!
 you can enter the site in below link.
 <https://keinn51.github.io/React_JS_Movie_Web_Nomad>
 
+If you want to use my src code, i recommend you to just get "src" folder.
+And make your own CRA files, and use it.
+
 ---
 
 ### How it looks like?
@@ -27,12 +30,12 @@ you can enter the site in below link.
 
 ### file explaination
 
-##### atom
+#### ► atom
 
 * NavList : for global variable setting
 
 
-##### component
+#### ➤ component
 
 useful codes
 
@@ -43,7 +46,7 @@ useful codes
 * Slide : Make Slide part for home. you can touch the button~
 
 
-##### render
+#### ➤ render
 
 all the rendering codes in projects
 
@@ -55,7 +58,7 @@ all the rendering codes in projects
 
 * MovieSlide : Make Slide for home.
 
-##### router
+#### ➤ router
 
 routes codes are here. The codes download movie API, and send to 'render' the information. (like port)
 
