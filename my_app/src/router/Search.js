@@ -6,7 +6,7 @@ import Load from '../component/Load';
 
 
 function Search() {
-  const { search, lst } = useParams();
+  const { search } = useParams();
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [movArr, setMovArr] = useState([]);

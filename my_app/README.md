@@ -1,70 +1,134 @@
-# Getting Started with Create React App
+# It's the Code Challenge with Nomad Coder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Making my own movie web site!
 
-## Available Scripts
+you can enter the site in below link.
+<https://keinn51.github.io/React_JS_Movie_Web_Nomad>
 
-In the project directory, you can run:
+---
 
-### `npm start`
+### How it looks like?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img width="1348" alt="스크린샷 2021-12-19 오후 1 38 17" src="https://user-images.githubusercontent.com/79993356/146664057-c2ec96ef-9b9f-45bc-bbf7-3fb236f07409.png">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### What you can learn from this code challenge
 
-### `npm run build`
+* how to use useEffect, useState
+* HTML / CSS
+* How to Use Slide
+* fontawesome in React
+* css position
+* css grid
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### file explaination
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##### atom
 
-### `npm run eject`
+* NavList : for global variable setting
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##### component
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+useful codes
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* Load : It is just a show loading..
 
-## Learn More
+* Navbar : a bar always above the screen
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Slide : Make Slide part for home. you can touch the button~
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+##### render
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+all the rendering codes in projects
 
-### Analyzing the Bundle Size
+* MovieDetail : Code giving detailed information about one movie
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* MovieGroup : Classify the movies in group (Genre, Rating...)
 
-### Making a Progressive Web App
+* MovieSearch : Search the key word and get movie you wanna see
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* MovieSlide : Make Slide for home.
 
-### Advanced Configuration
+##### router
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+routes codes are here. The codes download movie API, and send to 'render' the information. (like port)
 
-### Deployment
+all files are same function with "Movie..."
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### How to get CRA (create-react-app)?
+
+
+#### (1) enter the commands
+
+```
+npx create-react-app my-app
+cd my-app
+npm start
+```
+
+
+#### (2) edit the src folder
+
+---
+
+### How to publish?
+
+
+#### (1) enter the commands
+
+```
+npm i gh-pages
+npm run build
+```
+
+
+#### (2) enter below codes in package.json
+
+you have to code it whole below the codes!
+
+```
+"homepage" : "https://keinn51.github.io/React_JS_Movie_Web_Nomad"
+```
+
+you have to change the homepage name! (your git name, git project name)
+
+
+#### (3) enter below codes in package.json, "script" section
+
+![Untitled](https://user-images.githubusercontent.com/79993356/146664273-c8499416-94c3-4c06-8d1a-babb2592ece0.png)
+
+just like this
+
+```
+"deploy": "gh-pages -d build",
+"predeploy": "npm run build"
+```
+
+#### (4) publish!
+
+```
+npm run deploy
+```
+
+---
+
+### Release note
+
+#### [1. Set ReactJS / 21.12.10](https://brash-wave-2cb.notion.site/1-React-js-1d904a011b92400e83a0dc88fc127996)
+
+#### [2. HTML / CSS / 21.12.11](https://brash-wave-2cb.notion.site/2-HTML-CSS-d445f6147acc4a0d869f112fd5e4af45)
+
+#### [3. Set Slide / 21.12.12](https://brash-wave-2cb.notion.site/3-Slide-604acd3a2e1146ce85caa543ab5a3ed3)
+
+#### [4. Use Atom / 21.12.13](https://brash-wave-2cb.notion.site/4-atom-b458047fa78c487b92c0f8e12608038d)
+
+#### [5. Search Bar / 21.12.16](https://brash-wave-2cb.notion.site/5-Search-Bar-For-Web-13a3a0f642644396a27165a4e5f40312)

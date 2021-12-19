@@ -19,7 +19,7 @@ function App() {
           <Route path={"/"} element={<Home />} />
           <Route path={`/page/:group/:page`} element={<Group />} />
           <Route path={`/movie/:id`} element={<Detail />} />
-          <Route path={`/search/:search/:lst`} element={<Search />} />
+          <Route path={`/search/:search`} element={<Search />} />
         </Routes>
       </Router>
     </RecoilRoot>

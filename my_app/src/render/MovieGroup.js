@@ -13,11 +13,11 @@ function MovieGroup({ id, coverImg, title, rating, runtime, year, summary }) {
 
       {/* ShortView (Img, Title, rating, runtime...) */}
       <div className={styles.show}>
-        <div className={styles.shortView}>
           {/* Img */}
-          <div className={styles.shortView_Img}>
+          <div className={styles.Img}>
             <img src={coverImg} alt={title} onError={onErrorImg} />
           </div>
+          {/* Letters */}
           <div className={styles.letters}>
             <div className={styles.title}>
               <div>
@@ -36,7 +36,6 @@ function MovieGroup({ id, coverImg, title, rating, runtime, year, summary }) {
             <p>{summary ? (summary.length > 180 ? `${summary.slice(0, 180)}...` : summary) : null}</p>
           </div>
         </div>
-      </div>
     </div>
   )
 }

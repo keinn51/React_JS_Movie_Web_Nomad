@@ -37,7 +37,7 @@ function Navbar() {
                     })
                 }
                 {/* 🎄 Merry Christmas! */}
-                <div className={styles.MerryChristMas}><Link to={`/search/christmas/1`}>Christmas🎄</Link></div>
+                <div className={styles.MerryChristMas}><Link to={`/search/christmas`}>Christmas🎄</Link></div>
             </div>
 
             {/* Search Bar */}
@@ -54,7 +54,7 @@ function Navbar() {
                         >
                         </input>
                         {/* Search Button */}
-                        <Link to={`/search/${search}/1`}>
+                        <Link to={`/search/${search}`}>
                             <button>
                                 <FontAwesomeIcon icon={faSearch} size="lg" />
                             </button>

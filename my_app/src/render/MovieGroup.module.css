@@ -2,27 +2,24 @@
   color: rgb(32, 30, 30);
   display: flex;
   justify-content: center;
-  /* float: left; */
 }
 
+/* flex-row : show divs in a row */
 .show {
+  display: flex;
+  flex-direction: row;
   margin: 10px 10px;
+  padding: 10px ;
   width: 500px;
   height: 370px;
   border: 2px solid snow;
   border-radius: 10px;
   overflow: hidden;
-
 }
 
-.shortView {
-  display: flex;
-  flex-direction: row;
-  padding: 10px ;
-}
-
-
-.shortView_Img {
+/* float:left -> U can displace the letters
+right side of Img */
+.Img {
   float: left;
   width: 230px;
   height: 345px;
@@ -46,10 +43,14 @@
   margin: 10px;
 }
 
+/* delete the style of li
+(ex : - 1 - 2 - 3  =>  1 2 3) */
 .letters li {
   list-style-type: none;
 }
 
+/* word-break : Lines are separated 
+by number of lines, not words  */
 .letters p {
   word-break: break-all;
   text-align: justify;
