@@ -14,6 +14,8 @@ function Search() {
   const getMovies = () => {
     // console.log(`getmovie`)
     for (let i = 1; i <= 100; i++) {
+      setLoading(true);
+      setMovies([]);
       fetch(`https://yts.mx/api/v2/list_movies.json?page=${i}&sort_by=rating`)
         .then((res) => res.json())
         .then((json) => setMovies(json.data.movies))
@@ -32,7 +34,7 @@ function Search() {
 
   useEffect(() => {
     if (movies.length === 0) {
-      return;
+      return <Load />;
     }
     else {
       setMovArr(

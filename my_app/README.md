@@ -28,6 +28,17 @@ And make your own CRA files, and use it.
 
 ---
 
+
+### To use this repository
+
+```
+npm install
+npm start
+```
+
+---
+
+
 ### file explaination
 
 #### ► atom
@@ -63,7 +74,6 @@ all the rendering codes in projects
 routes codes are here. The codes download movie API, and send to 'render' the information. (like port)
 
 all files are same function with "Movie..."
-
 
 ---
 
