@@ -1,23 +1,16 @@
 {
   "files": {
-    "main.css": "/React_JS_Movie_Web_Nomad/static/css/main.c31060c0.chunk.css",
-    "main.js": "/React_JS_Movie_Web_Nomad/static/js/main.23a13313.chunk.js",
-    "main.js.map": "/React_JS_Movie_Web_Nomad/static/js/main.23a13313.chunk.js.map",
-    "runtime-main.js": "/React_JS_Movie_Web_Nomad/static/js/runtime-main.ecec361d.js",
-    "runtime-main.js.map": "/React_JS_Movie_Web_Nomad/static/js/runtime-main.ecec361d.js.map",
-    "static/js/2.57d1c997.chunk.js": "/React_JS_Movie_Web_Nomad/static/js/2.57d1c997.chunk.js",
-    "static/js/2.57d1c997.chunk.js.map": "/React_JS_Movie_Web_Nomad/static/js/2.57d1c997.chunk.js.map",
+    "main.css": "/React_JS_Movie_Web_Nomad/static/css/main.7f7c4145.css",
+    "main.js": "/React_JS_Movie_Web_Nomad/static/js/main.75e5c2fd.js",
+    "static/media/default_back.jpeg": "/React_JS_Movie_Web_Nomad/static/media/default_back.b93cfe342bcd6011d555.jpeg",
+    "static/media/default_back_Santa.jpeg": "/React_JS_Movie_Web_Nomad/static/media/default_back_Santa.b93cfe342bcd6011d555.jpeg",
+    "static/media/default_Img.jpeg": "/React_JS_Movie_Web_Nomad/static/media/default_Img.e0b48a92573fb42c3454.jpeg",
     "index.html": "/React_JS_Movie_Web_Nomad/index.html",
-    "static/css/main.c31060c0.chunk.css.map": "/React_JS_Movie_Web_Nomad/static/css/main.c31060c0.chunk.css.map",
-    "static/js/2.57d1c997.chunk.js.LICENSE.txt": "/React_JS_Movie_Web_Nomad/static/js/2.57d1c997.chunk.js.LICENSE.txt",
-    "static/media/default_Img.e0b48a92.jpeg": "/React_JS_Movie_Web_Nomad/static/media/default_Img.e0b48a92.jpeg",
-    "static/media/default_back.b93cfe34.jpeg": "/React_JS_Movie_Web_Nomad/static/media/default_back.b93cfe34.jpeg",
-    "static/media/Search.module.css": "/React_JS_Movie_Web_Nomad/static/media/default_back_Santa.b93cfe34.jpeg"
+    "main.7f7c4145.css.map": "/React_JS_Movie_Web_Nomad/static/css/main.7f7c4145.css.map",
+    "main.75e5c2fd.js.map": "/React_JS_Movie_Web_Nomad/static/js/main.75e5c2fd.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.ecec361d.js",
-    "static/js/2.57d1c997.chunk.js",
-    "static/css/main.c31060c0.chunk.css",
-    "static/js/main.23a13313.chunk.js"
+    "static/css/main.7f7c4145.css",
+    "static/js/main.75e5c2fd.js"
   ]
 }
