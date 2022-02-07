@@ -14,20 +14,18 @@ And make your own CRA files, and use it.
 
 <img width="1348" alt="스크린샷 2021-12-19 오후 1 38 17" src="https://user-images.githubusercontent.com/79993356/146664057-c2ec96ef-9b9f-45bc-bbf7-3fb236f07409.png">
 
-
 ---
 
 ### What you can learn from this code challenge
 
-* how to use useEffect, useState
-* HTML / CSS
-* How to Use Slide
-* fontawesome in React
-* css position
-* css grid
+- how to use useEffect, useState
+- HTML / CSS
+- How to Use Slide
+- fontawesome in React
+- css position
+- css grid
 
 ---
-
 
 ### To use this repository
 
@@ -38,36 +36,33 @@ npm start
 
 ---
 
-
 ### file explaination
 
 #### ► atom
 
-* NavList : for global variable setting
-
+- NavList : for global variable setting
 
 #### ➤ component
 
 useful codes
 
-* Load : It is just a show loading..
+- Load : It is just a show loading..
 
-* Navbar : a bar always above the screen
+- Navbar : a bar always above the screen
 
-* Slide : Make Slide part for home. you can touch the button~
-
+- Slide : Make Slide part for home. you can touch the button~
 
 #### ➤ render
 
 all the rendering codes in projects
 
-* MovieDetail : Code giving detailed information about one movie
+- MovieDetail : Code giving detailed information about one movie
 
-* MovieGroup : Classify the movies in group (Genre, Rating...)
+- MovieGroup : Classify the movies in group (Genre, Rating...)
 
-* MovieSearch : Search the key word and get movie you wanna see
+- MovieSearch : Search the key word and get movie you wanna see
 
-* MovieSlide : Make Slide for home.
+- MovieSlide : Make Slide for home.
 
 #### ➤ router
 
@@ -79,7 +74,6 @@ all files are same function with "Movie..."
 
 ### How to get CRA (create-react-app)?
 
-
 #### (1) enter the commands
 
 ```
@@ -88,13 +82,11 @@ cd my-app
 npm start
 ```
 
-
 #### (2) edit the src folder
 
 ---
 
 ### How to publish?
-
 
 #### (1) enter the commands
 
@@ -102,7 +94,6 @@ npm start
 npm i gh-pages
 npm run build
 ```
-
 
 #### (2) enter below codes in package.json
 
@@ -113,7 +104,6 @@ you have to code it whole below the codes!
 ```
 
 you have to change the homepage name! (your git name, git project name)
-
 
 #### (3) enter below codes in package.json, "script" section
 
@@ -132,7 +122,7 @@ just like this
 npm run deploy
 ```
 
----
+<!-- ---
 
 ### Release note
 
@@ -144,4 +134,4 @@ npm run deploy
 
 #### [4. Use Atom / 21.12.13](https://brash-wave-2cb.notion.site/4-atom-b458047fa78c487b92c0f8e12608038d)
 
-#### [5. Search Bar / 21.12.16](https://brash-wave-2cb.notion.site/5-Search-Bar-For-Web-13a3a0f642644396a27165a4e5f40312)
+#### [5. Search Bar / 21.12.16](https://brash-wave-2cb.notion.site/5-Search-Bar-For-Web-13a3a0f642644396a27165a4e5f40312) -->

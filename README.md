@@ -4,6 +4,10 @@
 <img width="1348" alt="스크린샷 2021-12-19 오후 1 38 17" src="https://user-images.githubusercontent.com/79993356/146664057-c2ec96ef-9b9f-45bc-bbf7-3fb236f07409.png" >
 </p>
 
+<p align='center'>
+    <a href="https://keinn51.github.io/React_JS_Movie_Web_Nomad">Published Webpage</a>
+</p>
+
 ## 🛠 Using Skill
 
 <p align='center'>
@@ -13,6 +17,22 @@
     <img src="https://img.shields.io/badge/react_dom-^17.0.2-blueviolet?logo=ReactOS"/>
     <img src="https://img.shields.io/badge/react_router_dom-^6.2.1-critical?logo=React Table"/>
 </p>
+
+## 💁‍♂️ Introducing Project
+
+### the movie recommending web for users
+
+#### 🗂 Category recommending
+
+> - You can see recommended movies with various categories like "romance", "music", "animation"...
+
+#### 🔎 Searching movie
+
+> - You can search for a movie you want by using search bar.
+
+#### 🔥 High rating movie showing
+
+> - You can see movies ordered by rating.
 
 ## 📁 Folder Structure
 
@@ -26,6 +46,27 @@ you can meet Detail explanation in my-app folder!!
 ## 💡 Major Implement
 
 ## 🤸‍♀️ How To Use?
+
+#### start
+
+```
+npm install
+npm start
+```
+
+#### build
+
+```
+npm run build
+```
+
+#### deploy
+
+Edit the value of "hompage" in package.json that you wanna show your project. then,
+
+```
+npm run deploy
+```
 
 ## 🔖 Reference
 
