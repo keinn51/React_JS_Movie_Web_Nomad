@@ -45,6 +45,8 @@ you can meet Detail explanation in my-app folder!!
 
 ## 💡 Major Implement
 
+- [Move to wiki!](https://github.com/keinn51/React_JS_Movie_Web_Nomad/wiki#3-major-implement)
+
 ## 🤸‍♀️ How To Use?
 
 #### start
