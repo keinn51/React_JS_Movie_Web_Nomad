@@ -39,7 +39,7 @@
 This project includes
 
 - Nomad_Steps : a folder in which the class codes are organized.
-- my_app : code challenge after taking a class from a nomad coder.
+- my_app : **My own Develop** after taking a class from a nomad coder.
 
 you can meet Detail explanation in my-app folder!!
 
