@@ -20,7 +20,8 @@
 
 ## 💁‍♂️ Introducing Project
 
-### the movie recommending web for users
+### the movie recommending web for users!
+### ⭐️ I develop this web on my own after taking class⭐️
 
 #### 🗂 Category recommending
 
